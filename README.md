@@ -13,7 +13,7 @@ Tek sayfalık, mobil uyumlu, 3D logolu tanıtım sitesi. Saf HTML / CSS / JavaSc
 | `cerez-politikasi.html` | Çerez Politikası |
 | `assets/` | Logo, favicon ve müşteri videoları |
 
-## Replit'te yayına alma
+## Yayına alma
 
 1. Replit'te **Create Repl** → **HTML, CSS, JS** şablonunu seçin.
 2. Şablonun oluşturduğu `index.html`, `style.css`, `script.js` dosyalarını silin.
@@ -24,18 +24,16 @@ Tek sayfalık, mobil uyumlu, 3D logolu tanıtım sitesi. Saf HTML / CSS / JavaSc
 
 Üç memnuniyet videosu `assets/videolar/` klasöründe, web için küçültülmüş hâlde (720p, H.264) duruyor: `yorum-1.mp4`, `yorum-2.mp4`, `yorum-3.mp4`. Kapak görselleri `kapak-1.jpg`, `kapak-2.jpg`, `kapak-3.jpg`. Videoyu değiştirmek için aynı adla yeni dosyayı koymanız yeterli; dikey (9:16) ve 20 MB'ın altında MP4 önerilir.
 
-## Teklif formunu bağlama
+## Teklif formu (Vercel + Resend)
 
-Form şu an doğrulama yapıp başarı ekranını gösteriyor, ancak gelen talepleri bir yere göndermiyor. Talepleri e-postanıza almak için:
+Form, `api/teklif.js` adlı Vercel fonksiyonuna gönderilir; fonksiyon talebi Resend ile dogrureklammerkezi@gmail.com adresine e-posta olarak iletir. Çalışması için bir kez şu ayar gerekir:
 
-1. Replit'te formu karşılayacak küçük bir sunucu kurun (Replit Agent'a şunu yazabilirsiniz: *"/api/teklif adresine POST edilen JSON teklif formunu bana e-posta olarak gönderen bir Node.js Express sunucusu kur, statik dosyaları da bu sunucudan sun."*).
-2. `script.js` dosyasının en üstündeki satırı şöyle değiştirin:
+1. resend.com'a **dogrureklammerkezi@gmail.com** adresiyle ücretsiz üye olun.
+2. Resend panelinde **API Keys → Create API Key** ile bir anahtar oluşturup kopyalayın.
+3. Vercel'de projeyi açın: **Settings → Environment Variables** → Key: `RESEND_API_KEY`, Value: kopyaladığınız anahtar → **Save**.
+4. **Deployments** sekmesinde son yayının yanındaki **⋯ → Redeploy** ile siteyi yeniden yayınlayın.
 
-   ```js
-   const TEKLIF_ENDPOINT = '/api/teklif';
-   ```
-
-Formdan gelen alanlar: `paket`, `isletme`, `istek`, `adSoyad`, `telefon`, `eposta`, `kvkkOnay`, `tarih`, `sayfa`.
+İsteğe bağlı: `TEKLIF_ALICI` değişkeniyle talebin gideceği adresi değiştirebilirsiniz. Kendi alan adınızı Resend'de doğrularsanız `TEKLIF_GONDEREN` ile gönderen adresini de (ör. `Doğru Reklam Merkezi <form@alanadiniz.com>`) değiştirebilirsiniz.
 
 ## Yayına almadan önce
 

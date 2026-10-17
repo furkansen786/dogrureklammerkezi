@@ -1,12 +1,11 @@
 /* =========================================================
    Doğru Reklam Merkezi — Etkileşimler ve 3D sahneler
    ---------------------------------------------------------
-   REPLIT NOTU: Teklif formunu gerçekten almak için aşağıdaki
-   TEKLIF_ENDPOINT değerine kendi sunucu adresinizi yazın
-   (örn. '/api/teklif'). Boş bırakılırsa form yalnızca
+   Teklif formu, Vercel'deki api/teklif.js fonksiyonuna gönderilir
+   ve oradan e-posta olarak iletilir. Boş bırakılırsa form yalnızca
    tarayıcı konsoluna yazar ve başarı ekranını gösterir.
    ========================================================= */
-const TEKLIF_ENDPOINT = '';
+const TEKLIF_ENDPOINT = '/api/teklif';
 
 (() => {
   'use strict';
@@ -542,6 +541,7 @@ const TEKLIF_ENDPOINT = '';
         telefon: normPhone(form.telefon.value),
         eposta: form.eposta.value.trim(),
         kvkkOnay: true,
+        website: form.website ? form.website.value : '',
         tarih: new Date().toISOString(),
         sayfa: location.href,
       };
