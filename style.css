@@ -292,6 +292,18 @@ body.menu-open .menu-toggle span:nth-child(3) { width: 22px; left: 13px; transfo
   letter-spacing: -.004em;
   color: var(--orman);
 }
+.hero__eyebrow {
+  display: block;
+  margin-bottom: clamp(14px, 2vw, 22px);
+  font-family: var(--font-body, inherit);
+  font-size: clamp(.8125rem, .76rem + .25vw, .9375rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--deniz);
+  animation: fade-in .9s var(--ease-out) .05s both;
+}
 .hero__line { display: flex; align-items: center; gap: .17em; }
 .hero__bar { position: relative; flex: none; width: var(--bar-total); height: .15em; transform: translateY(-.03em); }
 .hero__bar::before {
