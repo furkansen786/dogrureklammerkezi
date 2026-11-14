@@ -7,6 +7,8 @@
   <meta name="description" content="Doğru Reklam Merkezi; Meta (Instagram ve Facebook) reklam yönetimi ve sosyal medya yönetimi hizmeti veren dijital pazarlama ajansıdır. İşletmenizi anlatın, size özel teklif hazırlayalım.">
   <meta name="theme-color" content="#034732">
   <meta name="color-scheme" content="light">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.dogrureklammerkezi.com/">
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -17,7 +19,15 @@
   <meta property="og:site_name" content="Doğru Reklam Merkezi">
   <meta property="og:title" content="Doğru Reklam Merkezi | Meta Reklam ve Sosyal Medya Yönetimi">
   <meta property="og:description" content="Doğru kitleye, doğru anda, doğru mesajla. Meta reklam yönetimi ve sosyal medya yönetimi.">
-  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:url" content="https://www.dogrureklammerkezi.com/">
+  <meta property="og:image" content="https://www.dogrureklammerkezi.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Doğru Reklam Merkezi logosu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Doğru Reklam Merkezi | Meta Reklam ve Sosyal Medya Yönetimi">
+  <meta name="twitter:description" content="Doğru kitleye, doğru anda, doğru mesajla. Meta reklam yönetimi ve sosyal medya yönetimi.">
+  <meta name="twitter:image" content="https://www.dogrureklammerkezi.com/assets/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +38,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Doğru Reklam Merkezi",
-    "description": "Meta reklam yönetimi ve sosyal medya yönetimi hizmeti veren dijital pazarlama ajansı.",
-    "sameAs": ["https://www.instagram.com/dogrureklammerkezi/"],
-    "knowsAbout": ["Meta Reklamları", "Instagram Reklamları", "Facebook Reklamları", "Sosyal Medya Yönetimi"]
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.dogrureklammerkezi.com/#ajans",
+        "name": "Doğru Reklam Merkezi",
+        "url": "https://www.dogrureklammerkezi.com/",
+        "logo": "https://www.dogrureklammerkezi.com/assets/logo.png",
+        "image": "https://www.dogrureklammerkezi.com/assets/og-image.png",
+        "description": "Meta (Instagram ve Facebook) reklam yönetimi ve sosyal medya yönetimi hizmeti veren dijital pazarlama ajansı.",
+        "slogan": "Doğru kitleye, doğru anda, doğru mesajla.",
+        "areaServed": { "@type": "Country", "name": "Türkiye" },
+        "sameAs": ["https://www.instagram.com/dogrureklammerkezi/"],
+        "knowsAbout": ["Meta Reklamları", "Instagram Reklamları", "Facebook Reklamları", "Sosyal Medya Yönetimi", "İçerik Üretimi", "Reels Kurgusu"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Hizmet paketleri",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Reklam Yönetimi", "description": "Instagram ve Facebook reklamları, ilgi alanı ve benzer kitle hedeflemesi, yeniden pazarlama, A/B testleri ve aylık performans raporu." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sosyal Medya Yönetimi", "description": "Aylık içerik planı ve paylaşım takvimi, gönderi, hikâye ve Reels tasarımı, profil düzenleme ve aylık raporlama." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reklam + Sosyal Medya", "description": "Meta reklam yönetimi ve sosyal medya yönetiminin tek strateji ve tek ekiple birlikte yürütüldüğü kapsamlı paket." } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.dogrureklammerkezi.com/#site",
+        "url": "https://www.dogrureklammerkezi.com/",
+        "name": "Doğru Reklam Merkezi",
+        "inLanguage": "tr-TR",
+        "publisher": { "@id": "https://www.dogrureklammerkezi.com/#ajans" }
+      }
+    ]
   }
   </script>
 </head>
@@ -45,8 +82,8 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="site-header__logo" href="#" aria-label="Doğru Reklam Merkezi, sayfanın başına dön">
-        <img class="logo-color" src="assets/logo.png" alt="Doğru Reklam Merkezi" width="1372" height="388">
-        <img class="logo-white" src="assets/logo-beyaz.png" alt="" width="1366" height="389" aria-hidden="true">
+        <img class="logo-color" src="/assets/logo.png" alt="Doğru Reklam Merkezi" width="400" height="113">
+        <img class="logo-white" src="/assets/logo-beyaz.png" alt="" width="400" height="114" aria-hidden="true">
       </a>
 
       <nav class="site-nav" aria-label="Ana menü">
@@ -85,13 +122,14 @@
       <div class="container hero__grid">
         <div class="hero__copy">
           <h1 class="hero__title" id="hero-baslik">
+            <span class="hero__eyebrow">Meta Reklam ve Sosyal Medya Ajansı</span>
             <span class="hero__line" style="--i:0"><span class="hero__bar" aria-hidden="true"></span><span class="hero__text">DOĞRU KİTLEYE,</span></span>
             <span class="hero__line" style="--i:1"><span class="hero__bar" aria-hidden="true"></span><span class="hero__text">DOĞRU ANDA,</span></span>
             <span class="hero__line" style="--i:2"><span class="hero__bar" aria-hidden="true"></span><span class="hero__text">DOĞRU MESAJLA.</span></span>
           </h1>
           <p class="hero__lead">
             Markanız için Meta reklamlarınızı yönetiyoruz, sosyal medya hesaplarınızı düzenli ve özenli içeriklerle büyütüyoruz.
-            Sen de hemen şimdi Teklif Al butonuna tıkla, markanı bir adım öne taşı.
+            Hemen Teklif Al butonuna tıklayın, markanızı bir adım öne taşıyın.
           </p>
           <div class="hero__actions">
             <button class="btn btn--primary btn--lg" type="button" data-teklif>Teklif Al</button>
@@ -429,7 +467,7 @@
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
-        <img src="assets/logo-beyaz.png" alt="Doğru Reklam Merkezi" width="1366" height="389" loading="lazy">
+        <img src="/assets/logo-beyaz.png" alt="Doğru Reklam Merkezi" width="400" height="114" loading="lazy">
         <p>Meta reklam yönetimi ve sosyal medya yönetimi.</p>
       </div>
       <nav class="site-footer__col" aria-label="Alt menü">
@@ -448,8 +486,8 @@
     <div class="container site-footer__bottom">
       <p>© <span data-year>2026</span> Doğru Reklam Merkezi. Tüm hakları saklıdır.</p>
       <div>
-        <a href="kvkk.html">KVKK Aydınlatma Metni</a>
-        <a href="cerez-politikasi.html">Çerez Politikası</a>
+        <a href="/kvkk">KVKK Aydınlatma Metni</a>
+        <a href="/cerez-politikasi">Çerez Politikası</a>
       </div>
     </div>
   </footer>
@@ -539,7 +577,7 @@
           <label class="consent">
             <input type="checkbox" name="kvkk" aria-describedby="kvkk-hata">
             <span class="consent__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-            <span>Kişisel verilerimin teklif hazırlanması amacıyla işlenmesine ilişkin <a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum.</span>
+            <span>Kişisel verilerimin teklif hazırlanması amacıyla işlenmesine ilişkin <a href="/kvkk" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum.</span>
           </label>
           <p class="field__error" id="kvkk-hata"></p>
         </div>

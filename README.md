@@ -11,14 +11,22 @@ Tek sayfalık, mobil uyumlu, 3D logolu tanıtım sitesi. Saf HTML / CSS / JavaSc
 | `script.js` | Etkileşimler, 3D logo, teklif formu |
 | `kvkk.html` | KVKK Aydınlatma Metni |
 | `cerez-politikasi.html` | Çerez Politikası |
-| `assets/` | Logo, favicon ve müşteri videoları |
+| `404.html` | Bulunamayan sayfalar için markalı hata sayfası |
+| `robots.txt` | Arama motorlarına taranacak alanları ve site haritasını bildirir |
+| `sitemap.xml` | Site haritası; yeni sayfa eklendiğinde buraya da eklenmeli |
+| `vercel.json` | Temiz adresler (`/kvkk`), yönlendirmeler, güvenlik ve önbellek başlıkları |
+| `assets/` | Logo, favicon, paylaşım görseli (`og-image.png`) ve müşteri videoları |
 
 ## Yayına alma
 
-1. Replit'te **Create Repl** → **HTML, CSS, JS** şablonunu seçin.
-2. Şablonun oluşturduğu `index.html`, `style.css`, `script.js` dosyalarını silin.
-3. Bu klasördeki tüm dosyaları (`assets` klasörü dahil) Replit'in dosya paneline sürükleyip bırakın.
-4. **Run**'a basın. Site sağdaki önizlemede açılır; **Deploy** ile yayına alabilirsiniz.
+Site Vercel'de yayında; GitHub'daki `main` dalına gelen her değişiklik otomatik olarak yayına alınır. Başka bir dala gönderilen değişiklikler için Vercel önce bir önizleme adresi oluşturur.
+
+## SEO notları
+
+- Her sayfanın `<head>` bölümünde `canonical` adresi var; yeni sayfa eklerken kendi adresini yazın ve `sitemap.xml` dosyasına ekleyin.
+- Sayfa içi bağlantılar `.html` olmadan yazılır (`/kvkk`); `vercel.json` eski `.html` adreslerini otomatik yönlendirir.
+- Dışarıdan yeni bir betik, yazı tipi veya görsel kaynağı eklerseniz `vercel.json` içindeki `Content-Security-Policy` satırına o adresi de ekleyin, yoksa tarayıcı onu engeller.
+- `assets/` dosyaları bir hafta önbellekte tutulur; bir görseli değiştirince eski sürüm bazı ziyaretçilerde birkaç gün görünebilir. Hemen yansımasını istiyorsanız dosya adını değiştirin (ör. `logo-2.png`).
 
 ## Müşteri videoları
 
